@@ -1,0 +1,117 @@
+@import url('"https://fonts.googleapis.com/css?family=Poppins:300,400,500,700,900&display=swap"');
+
+
+body { 
+  background: black;
+font-family: 'poppins';
+font-weight:900;
+}
+body:after{
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  z-index: -1;
+  width: 200%;
+  height: 200%;
+  background: url('https://i.pinimg.com/originals/6d/7e/14/6d7e1418062c0463ebbf0eedc2ba858e.gif');
+  background-size: contain;
+ opacity: 10%;
+ 
+  filter: blur(30px);
+} 
+
+.content {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  
+}
+
+.cursor {
+  position:absolute;
+  width:20px;
+  height:20px;
+  background-color:#fec400;
+  border-radius:100%;
+  pointer-events: none;
+  /*transition:all 0.1s;*/
+}
+
+.buttonindex {
+  display: flex;
+  justify-content: center;  
+  width: 305px;
+  height: 92px;
+  border-radius: 5px;
+  border: 2px solid white;
+  align-items: center;
+
+
+}
+
+.buttonindex span {
+   color: white;
+  font-weight: 900;
+  border-radius: 5px;
+  pointer-events: none;
+  font-size: 51px;
+}
+.buttonindex span:hover{
+color:#fdc559;
+}
+
+
+
+ .buttonindex:hover {
+  border-color: #fdc559;
+  box-shadow: 1px 1px 10px rgba(253, 197, 89, 0.5);
+}
+
+
+
+
+
+
+.title {
+  display:flex;
+  justify-content:center;
+  height: 274px;
+  margin-top:200px;
+  margin-bottom:250px;
+}
+
+.title span {
+  width: auto;
+   object-fit: contain;
+  transform:translateX(0);
+  pointer-events:none;
+  
+}
+
+.menu {
+  background-color: rgba(0, 0, 0, 0.438);
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+}
+
+.menu div {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:200px;
+  height:80px;
+  font-weight:900;
+}
+
+.menu div span {
+  pointer-events:none;
+}
+a{
+  text-decoration: none;
+}
+

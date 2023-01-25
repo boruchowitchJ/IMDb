@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/form.css">
+    <title>Document</title>
+    <script>
+      function updateMovie(){
+         alert()
+                const url = '/movies/:'+ document.getElementById('movieForm').elements["id"].value;
+                fetch(url, 
+                { 
+                    method : 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    redirect : 'follow',
+                    referrerPolicy : 'no-referrer',
+                    body : JSON.stringify(
+                        {
+                            Series_Title: document.getElementById('movieForm').elements["Series_Title"].value,
+                            Director: document.getElementById('movieForm').elements["Director"].value,
+                            Runtime: document.getElementById('movieForm').elements["Runtime"].value, 
+                            Genre: document.getElementById('movieForm').elements["Genre"].value, 
+                            Overview: document.getElementById('movieForm').elements["Overview"].value, 
+                            Runtime: document.getElementById('movieForm').elements["Runtime"].value,
+                            Released_Year: document.getElementById('movieForm').elements["Released_Year"].value,
+                            Poster_Link:document.getElementById('movieForm').elements["Poster_Link"].value
+
+                           }
+                    )
+                })
+                .then(function (response) {
+                    window.location="/movies"
+                });
+        }
+    </script>
+</head>
+<body>
+   
+<section  class="get-in-touch">
+   <h1 class="title">Modifier un Film</h1>
+   <form class="contact-form row" id="movieForm" action="/movies">
+      <div class="form-field col-lg-12 ">
+         <input class="input-text js-input"name="id"type="hidden" value= "<%=_id %>">
+   </div>
+      <div class="form-field col-lg-6">
+         <label class="label" for="Series_Title"> Titre</label>
+        <input class="input-text js-input" name="Series_Title" type="text" value="<%=Series_Title %>"> 
+      </div>
+      <div class="form-field col-lg-6 ">
+            <label class="label" for="Director"> Réalisateur</label>
+            <input class="input-text js-input" name="Director" type="text" value="<%=Director %>"> 
+      </div>      
+      <div class="form-field col-lg-6 ">
+         <label class="label" for="Runtime">Durée</label>
+            <input class="input-text js-input"name="Runtime"type="text" value= "<%=Runtime %>">
+      </div>
+       <div class="form-field col-lg-6 ">
+         <label class="label" for="Genre">Genre</label>
+            <input  class="input-text js-input"  name="Genre" type="text" value="<%=Genre %>">
+      </div>     
+     <div class="form-field col-lg-6">
+      <label class="label" for="Released_Year">Année</label>
+      <input  class="input-text js-input "  name="Released_Year" type="text"  value="<%=Released_Year %>">
+  </div>
+     <div class="form-field col-lg-6">
+        <label class="label" for="Poster_Link">Image</label>
+        <input  class="input-text js-input "  name="Poster_Link" type="text" placeholder="Url de l'image" value="<%=Poster_Link%>">
+    </div> 
+     
+    <div class="form-field col-lg-12">
+         <label  class="label" id="overviewLabel" for="Overview">Description</label>         
+         <textarea class="input-text js-input " id="overview" name="Overview" cols="30" rows="10"><%=Overview%></textarea>
+     </div>
+     <div class="form-field col-lg-3">
+        <button class="input-text js-input" id="submit-btn" type="button" onclick="updateMovie()">Edit</button>
+     </div>
+      
+      
+   </form>
+   
+   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</section>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/form.css">
+    <title>Document</title>
+</head>
+<body>
+   
+<section  class="get-in-touch">
+   <h1 class="title">Nouveau film</h1>
+   <form class="contact-form row" action="/movies" method="post">
+
+      <div class="form-field col-lg-6">
+         <label class="label" for="Series_Title"> Titre</label>
+        <input class="input-text js-input" name="Series_Title" type="text"> 
+      </div>
+      <div class="form-field col-lg-6 ">
+            <label class="label" for="Director"> Réalisateur</label>
+            <input class="input-text js-input" name="Director" type="text">
+            
+      </div>
+      <div class="form-field col-lg-6 ">
+         <label class="label" for="Runtime">Durée</label>
+            <input class="input-text js-input"name="Runtime"type="text">
+      </div>
+       <div class="form-field col-lg-6 ">
+         <label class="label" for="Genre">Genre</label>
+            <input  class="input-text js-input"  name="Genre" type="text">
+      </div>
+     
+      <div class="form-field col-lg-6">
+         <label class="label" for="Released_Year">Année</label>
+         <input  class="input-text js-input "  name="Released_Year" type="text" >
+     </div>
+        <div class="form-field col-lg-6">
+           <label class="label" for="Poster_Link">Image</label>
+           <input  class="input-text js-input "  name="Poster_Link" type="text" placeholder="Url de l'image" >
+       </div>
+    <div class="form-field col-lg-12">
+      <label  class="label" id="overviewLabel" for="Overview">Description</label>         
+      <textarea class="input-text js-input " id="overview" name="Overview" cols="30" rows="10"></textarea>
+     <div class="form-field col-lg-3">
+        <input class="input-text js-input" id="submit-btn" type="submit" value="Submit">
+     </div>     
+      
+   </form>
+   
+   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</section>
+</body>
+</html>

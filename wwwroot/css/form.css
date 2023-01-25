@@ -1,0 +1,117 @@
+@import url('"https://fonts.googleapis.com/css?family=Poppins:300,400,500,700,900&display=swap"');
+
+
+ 
+  body {
+    background: linear-gradient(#070707, #363636);
+    font-family: 'Poppins', sans-serif;
+    color: #FFFFFF;
+    min-height: 100%;
+    font-weight: 900;
+    height: 100vh;
+  }
+ 
+.get-in-touch {
+
+  max-width: 800px;
+  margin: 300px auto;
+  position: relative;  
+  padding: 20px;
+  color:#FFFFFF ;
+  border-radius: 20px;  
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  
+  }
+  .get-in-touch:hover {
+    border-color: #fdc559;
+    box-shadow: 1px 1px 10px rgba(253, 197, 89, 0.5);
+  }
+  .get-in-touch .title {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 3.2em;
+    line-height: 48px;
+    padding-bottom: 48px;
+    font-weight: 900;
+
+  }
+   .contact-form .form-field {
+    position: relative;
+    margin: 32px 0;
+  }
+  .contact-form .input-text {
+    display: block;
+    width: 100%;
+    height: 36px;
+    border-radius: 30px;
+    border-width: 0 0 2px 0;
+    font-size: 18px;
+    line-height: 26px;
+  
+  }
+  .contact-form .input-text:focus {
+    outline: none;
+  }
+  .contact-form .input-text:focus + .label,
+  .contact-form .input-text.not-empty + .label {
+    -webkit-transform: translateY(-24px);
+            transform: translateY(-24px);
+  }
+  .contact-form .label {
+    position: absolute;
+    left: 20px;
+    bottom: 29px;
+    font-size: 18px;
+    line-height: 26px;
+   
+    cursor: text;
+    transition: -webkit-transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;
+    transition: transform .2s ease-in-out, 
+    -webkit-transform .2s ease-in-out;
+  }
+  /* .contact-form .submit-btn {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    width:200px;
+    cursor: pointer;
+  } */
+ #submit-btn{
+    background: none;
+    
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    border: 1px solid #6a6965;
+    border-radius: 30px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: ease-out 0.3s;
+  }
+ #submit-btn i {
+    color: #fdc559;
+    margin-right: 5px;
+  }
+   #submit-btn:hover {
+    border-color: #fdc559;
+    box-shadow: 1px 1px 10px rgba(253, 197, 89, 0.5);
+  }
+  #submit-btn:focus {
+    outline: none;
+  }
+  #overview{
+    height: 120px;
+  }
+  #overviewLabel{
+    margin-bottom: 94px;
+  }
+  #movieForm{
+    margin-top: -64px
+  }
